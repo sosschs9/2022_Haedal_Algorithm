@@ -24,6 +24,7 @@ int main() {
 			cout << midget[i]<<endl;
 		}
 	}
+
 	
 }
 
