@@ -23,7 +23,7 @@ int main(void)
             if(vec1[i]+vec1[j]==sum)
             {
                 vec1.erase(vec1.erase(vec1.begin()+i));
-                vec1.erase(vec1.erase(vec1.begin()+(j-1)));
+                vec1.erase(vec1.eras e(vec1.begin()+(j-1)));
             }
         }
     }
