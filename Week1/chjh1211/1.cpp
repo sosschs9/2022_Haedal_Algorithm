@@ -8,29 +8,27 @@ int main(void)
 
     int sum=0;
     int a;
-    int m,n;
     for(int i=0;i<9;i++)
     {
         cin >> a;
         sum +=a;
         vec1.push_back(a);
     }
-    a=sum-100;
+    sum-=100;
 
-    for(int i=0;i<9;i++)
+    for(int i=0;i<vec1.size();i++)
     {
-        for(int j=i+1;j<9;j++)
+        for(int j=i+1;j<vec1.size();j++)
         {
-            if(vec1[i]+vec1[j]==a)
+            if(vec1[i]+vec1[j]==sum)
             {
-                m=i;
-                n=j;
+                vec1.erase(vec1.begin()+i);
+                vec1.erase(vec1.begin()+(j-1));
+                break;
             }
         }
     }
-
-    vec1.erase(vec1.begin()+m);
-    vec1.erase(vec1.begin()+(n-1));
+    cout << vec1.size()<<endl;
 
     for(int i=0;i<vec1.size();i++)
     {
