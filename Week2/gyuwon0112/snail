@@ -26,7 +26,7 @@ int main() {
 
 	cin >> C;
 	for (int i = 0; i < C; i++) {
-		fill_n(dp[0], MAX * MAX, -1); //dp배열을 -1로 채움
+		fill_n(dp[0], MAX * MAX, -1); //dp배열을 -1로 초기화
 		cin >> n >> m;
 
 		cout << fixed; //소수점 자리 고정
