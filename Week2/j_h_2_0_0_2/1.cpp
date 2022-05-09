@@ -10,7 +10,7 @@ int Lis(int i, int num, vector<int>& arr, vector<int>& L) {
 
     L[i] = 1;
     for (int j = i + 1; j < num; j++) {
-        if (i=0||arr[i] < arr[j]) {
+        if (arr[i] < arr[j]) {
             L[i] = max(L[i], Lis(j, num, arr, L) + 1);
         }
     }
