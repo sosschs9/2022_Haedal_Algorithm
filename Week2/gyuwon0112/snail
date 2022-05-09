@@ -14,6 +14,7 @@ double snail(int days, int meter) {
 
 	double& res = dp[days][meter];
 	if (res != -1) return res; //dp에 값이 있으면
+	//비가 내리면 2m 올라가고 맑으면 1m 올라가는 달팽이
 	res = 0.75 * snail(days + 1, meter + 2) + 0.25 * snail(days + 1, meter + 1);
 	
 	return res;
