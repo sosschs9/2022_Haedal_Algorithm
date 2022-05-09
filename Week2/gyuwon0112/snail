@@ -1,0 +1,41 @@
+//SNAIL
+//높이가 n미터인 우물을 m일 안에 달팽이가 끝까지 올라갈 확률
+#include <iostream>
+#include <vector>
+#define MAX 1001
+using namespace std;
+
+double dp[MAX][MAX];
+int n,m;
+
+double snail(int days, int meter) {
+	//m일 후 n미터 올라온 경우 1, 그렇지 않으면 0 반환
+	if (days == m) return meter >= n ? 1 : 0;
+
+	double& res = dp[days][meter];
+	if (res != -1) return res; //dp에 값이 있으면
+	res = 0.75 * snail(days + 1, meter + 2) + 0.25 * snail(days + 1, meter + 1);
+	
+	return res;
+}
+
+int main() {
+	int C = 0;
+	double result[10];
+
+	cin >> C;
+	for (int i = 0; i < C; i++) {
+		fill_n(dp[0], MAX * MAX, -1); //dp배열을 -1로 채움
+		cin >> n >> m;
+
+		cout << fixed; //소수점 자리 고정
+		cout.precision(10); //소수점 아래 10자리까지
+
+		result[i] = snail(0, 0);
+	}
+
+	for (int i = 0; i < C; i++) {
+		cout << result[i] << "\n";
+	}
+	
+}
