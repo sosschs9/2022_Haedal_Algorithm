@@ -3,7 +3,7 @@
 using namespace std;
 int main(){
 	int n;
-        int count=0;
+    int count=0;
 	int money[6] = {500,100,50,10,5,1};
 	cin>>n;
 	n=1000-n;
