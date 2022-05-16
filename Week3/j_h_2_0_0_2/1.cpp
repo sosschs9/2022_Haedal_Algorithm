@@ -8,8 +8,7 @@ int main()
 	int money[6] = {500, 100, 50, 10, 5, 1};
 	cin >> n;
 	n = 1000 - n;
-	for (int i = 0; i < 6; i++)
-	{
+	for (int i = 0; i < 6; i++){
 		count += n / money[i];
 		n %= money[i];
 	}
