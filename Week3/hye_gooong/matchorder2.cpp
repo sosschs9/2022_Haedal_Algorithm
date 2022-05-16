@@ -21,16 +21,17 @@ bool compare(const pair<int, int>& a, const pair<int, int>& b) {
 int matchOrder(int n) {
 	sort(russia.begin(), russia.end());
 	sort(korea.begin(), korea.end());
-	
-	int cnt = 0, u = 0;
+
+	int cnt = 0, u = 0, r = 1;
 	for (int i = 0; i < n; i++) {
 		if (korea[i].first >= russia[u].first) {
 			korea[i].second = russia[u].second;
 			cnt++;
 			u++;
-		}	
+		}
 		else {
-			korea[i].second = russia[n - 1].second;
+			korea[i].second = russia[n - r].second;
+			r++;
 		}
 	}
 	return cnt;
@@ -52,7 +53,7 @@ int main() {
 			cin >> korea[j].first;
 			korea[j].second = j;
 		}
-		
+
 		maxWin = matchOrder(N);
 		sort(russia.begin(), russia.end(), compare);
 		sort(korea.begin(), korea.end(), compare);
