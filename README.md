@@ -8,10 +8,18 @@
   - 쿼드 트리 뒤집기 <br>
     https://algospot.com/judge/problem/read/QUADTREE
 
-- Wekk2
+- Week2
   - 원주율 외우기 (PI) <br>
     https://www.algospot.com/judge/problem/read/PI
   - 최대 증가 부분 수열 (LIS) <br>
     https://www.algospot.com/judge/problem/read/LIS
   - 장마가 왔다 (SNAIL) <br>
     https://www.algospot.com/judge/problem/read/SNAIL
+
+- Week3
+  - 출선 순서 정하기 (MATCHORDER) <br>
+    https://algospot.com/judge/problem/read/MATCHORDER
+  - 거스름돈 <br>
+    https://www.acmicpc.net/problem/5585
+  - 숫자의 개수 <br>
+    https://www.acmicpc.net/problem/2577
